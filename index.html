@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ul {
+  background: #ededed;
+}
+li {
+  padding: 10px;
+}
+#container {
+  background: #fafafa;
+  padding: 20px;
+}
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+img {
+  border: 1px solid #666;
+  margin: 10px;
+  box-shadow: 1px 1px #333;
+}
+#fps-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  touch-action: none;
+}
+#fps {
+  font-size: 32px;
+  text-align: center;
+  color: #fafafa;
+  padding: 20px;
+}
+#customElTextarea {
+  width: 300px;
+  height: 100px;
+}
+.section {
+  margin: 10px;
+}
+#displayContainer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  touch-action: none;
+  padding: 20px;
+}
+#display {
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="fps-container">
+<div id="fps">60 FPS</div>
+</div>
+<div id="displayContainer">
+<div id="display"></div>
+</div>
+<h1>Independent rendering test</h1>
+<div class="section">
+<input id="jank" name="jank" type="checkbox" autocomplete="off"/>
+<label for="jank">Periodic jank</label>
+<input id="canvas" name="canvas" type="checkbox" autocomplete="off"/>
+<label for="canvas">Add canvas</label>
+<input id="advancedSvg" name="advancedSvg" type="checkbox" autocomplete="off"/>
+<label for="advancedSvg">Add advanced SVG</label>
+<input id="autoplayVideo" name="autoplayVideo" type="checkbox" autocomplete="off"/>
+<label for="autoplayVideo">Add video</label>
+</div>
+<div class="section">
+<input id="custom" name="custom" type="checkbox" autocomplete="off"/>
+<label for="custom">Add custom HTML</label>
+</div>
+<div class="section">
+<textarea id="customElTextarea">&lt;span&gt;Your custom HTML here!&lt;/span&gt;</textarea>
+</div>
+<ul>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+<li>Hey look I'm in a list! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/></li>
+</ul>
+</div>
+<script src="fps-emitter.js"></script>
+<script>
+(function () {
+  var $ = document.querySelector.bind(document)
+  var $$ = function (selector) {
+    return Array.prototype.slice.call(document.querySelectorAll(selector))
+  }
+  var display = $('#display')
+  var jankHandle
+
+  function jank(ms) {
+    var start = Date.now()
+    while (Date.now() - start <= ms) {}
+  }
+
+  function startJanking() {
+    jankHandle = setInterval(function () {
+      jank(200)
+    }, 300)
+  }
+
+  function stopJanking() {
+    clearInterval(jankHandle)
+  }
+
+  $('#jank').addEventListener('change', function (e) {
+    if (e.target.checked) {
+      startJanking()
+    } else {
+      stopJanking()
+    }
+  })
+
+  $('#canvas').addEventListener('change', function (e) {
+    if (e.target.checked) {
+      var canvasEl = document.createElement('canvas')
+      canvasEl.width = 100
+      canvasEl.height = 100
+	  var ctx = canvasEl.getContext('2d')
+	  ctx.fillStyle = 'goldenrod'
+	  ctx.fillRect(0, 0, 100, 100)
+      display.appendChild(canvasEl)
+    } else {
+      display.removeChild($('canvas'))
+    }
+  })
+
+  $('#advancedSvg').addEventListener('change', function (e) {
+    if (e.target.checked) {
+      var el = document.createElement('div')
+      el.classList.add('advancedSvgEl')
+	  el.innerHTML = '<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">  <defs>    <clipPath id="myClip">      <circle cx="30" cy="30" r="20"/>      <circle cx="70" cy="70" r="20"/>    </clipPath>  </defs>  <rect x="10" y="10" width="100" height="100"      clip-path="url(#myClip)"/></svg>'
+      display.appendChild(el)
+    } else {
+      display.removeChild($('.advancedSvgEl'))
+    }
+  })
+  
+  $('#autoplayVideo').addEventListener('change', function (e) {
+    if (e.target.checked) {
+      var el = document.createElement('div')
+      el.classList.add('autoplayVideoEl')
+	  el.innerHTML = '<video autoplay loop controls muted src="kirby_paint.mp4"></video>'
+      display.appendChild(el)
+    } else {
+      display.removeChild($('.autoplayVideoEl'))
+    }
+  })
+  
+  $('#custom').addEventListener('change', function (e) {
+    if (e.target.checked) {
+	  var el = document.createElement('div')
+      el.classList.add('customEl')
+	  el.innerHTML = $('#customElTextarea').value
+      display.appendChild(el)
+    } else {
+	  display.removeChild($('.customEl'))
+    }
+  })
+
+  var fps = new FpsEmitter()
+  var fpsDisplay = $('#fps')
+  fps.on('update', function (newFps) {
+    fpsDisplay.innerHTML = newFps + ' FPS'
+    fpsDisplay.style.background = 'rgba(200, 50, 50, ' + (1 - (newFps / 60)) + ')'
+  })
+})()
+</script>
+</body>
+</html>
