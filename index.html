@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<title>Independent Rendering test</title>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -11,8 +12,27 @@
 <div id="displayContainer">
 <div id="display"></div>
 </div>
-<h1>Independent rendering test</h1>
-<h3 id="confidentialWarning">Microsoft confidential</h3>
+<h1>Independent Rendering test</h1>
+<h3 id="confidentialWarning">Microsoft confidential <a id="whatIsThisToggle" href="#whatIsThis">What is this?</a></h3>
+<div id="whatIsThis" style="display:none;">
+  <p>
+    Edge and IE have a feature called <strong>Independent Rendering</strong>, which allows rendering work
+    to be done off the main thread and instead on a background thread, where it doesn't block JavaScript,
+    DOM events, or other main-thread-bound operations.
+  </p>
+  <p>
+    In the current implementation, though, some "advanced" features will cause Edge/IE to bail out of
+    Independent Rendering and instead do rendering on the main thread. This will lead to things like
+    lower framerate, delayed JavaScript, choppy rendering, etc.
+  </p>
+  <p>
+    In this demo, you can add certain "advanced" features that will trigger Independent Rendering deoptimization,
+    and after scrolling through the list the drop in framerate should be fairly obvious. Note that the framerate
+    counter uses <code>requestAnimationFrame()</code>, so it only measures jank for UI-thread-dependent
+    operations, e.g. hardware-accelerated CSS animations will not be janked, but animated GIFs (as in the list below)
+    will be.
+  </p>
+</div>
 <div class="section">
 <input id="jank" name="jank" type="checkbox" autocomplete="off"/>
 <label for="jank">Periodic jank</label>

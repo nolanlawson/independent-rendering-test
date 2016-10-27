@@ -110,6 +110,11 @@
     }
   })
 
+  $('#whatIsThisToggle').addEventListener('click', function (e) {
+    e.preventDefault()
+    $('#whatIsThis').style.display = $('#whatIsThis').style.display === 'none' ? 'inherit' : 'none'
+  })
+
   var fps = new FpsEmitter()
   var fpsDisplay = $('#fps')
   fps.on('update', function (newFps) {

@@ -67,3 +67,15 @@ img {
 h1, h2, h3 {
   text-align: center;
 }
+
+#whatIsThisToggle {
+  font-size: 14px;
+  color: dodgerblue;
+  margin-left: 10px;
+}
+
+#whatIsThis {
+  margin: 10px 50px;
+  background: #ededed;
+  padding: 10px;
+}
