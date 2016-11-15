@@ -88,6 +88,18 @@
     }
   })
 
+  $('#autoplayVideoWithControls').addEventListener('change', function (e) {
+    if (e.target.checked) {
+      var el = document.createElement('div')
+      el.classList.add('autoplayVideoElWithControls')
+      el.innerHTML = '<video autoplay loop muted controls src="kirby_paint.mp4" width="50" height="50"></video>'
+      appendToDisplay(el)
+    } else {
+      removeFromDisplay('.autoplayVideoElWithControls')
+    }
+  })
+
+
   $('#addAudio').addEventListener('change', function (e) {
     if (e.target.checked) {
       var el = document.createElement('div')
