@@ -70,33 +70,39 @@
 
   $('#advancedSvg').addEventListener('change', function (e) {
     if (e.target.checked) {
+      performance.mark('advancedSvg:add')
       var el = document.createElement('div')
       el.classList.add('advancedSvgEl')
       el.innerHTML = '<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">  <defs>    <clipPath id="myClip">      <circle cx="30" cy="30" r="20"/>      <circle cx="70" cy="70" r="20"/>    </clipPath>  </defs>  <rect x="10" y="10" width="100" height="100"      clip-path="url(#myClip)"/></svg>'
       appendToDisplay(el)
     } else {
+      performance.mark('advancedSvg:remove')
       removeFromDisplay('.advancedSvgEl')
     }
   })
 
   $('#autoplayVideo').addEventListener('change', function (e) {
     if (e.target.checked) {
+      performance.mark('autoplayVideo:add')
       var el = document.createElement('div')
       el.classList.add('autoplayVideoEl')
       el.innerHTML = '<video autoplay loop muted src="kirby_paint.mp4" width="50" height="50"></video>'
       appendToDisplay(el)
     } else {
+      performance.mark('autoplayVideo:remove')
       removeFromDisplay('.autoplayVideoEl')
     }
   })
 
   $('#autoplayVideoWithControls').addEventListener('change', function (e) {
     if (e.target.checked) {
+      performance.mark('autoplayVideoWithControls:add')
       var el = document.createElement('div')
       el.classList.add('autoplayVideoElWithControls')
       el.innerHTML = '<video autoplay loop muted controls src="kirby_paint.mp4" width="50" height="50"></video>'
       appendToDisplay(el)
     } else {
+      performance.mark('autoplayVideoWithControls:remove')
       removeFromDisplay('.autoplayVideoElWithControls')
     }
   })
@@ -104,22 +110,26 @@
 
   $('#addAudio').addEventListener('change', function (e) {
     if (e.target.checked) {
+      performance.mark('audio:add')
       var el = document.createElement('div')
       el.classList.add('addAudioEl')
       el.innerHTML = '<audio controls src="win31.mp3"></audio>'
       appendToDisplay(el)
     } else {
+      performance.mark('audio:remove')
       removeFromDisplay('.addAudioEl')
     }
   })
 
   $('#custom').addEventListener('change', function (e) {
     if (e.target.checked) {
+      performance.mark('custom:add')
       var el = document.createElement('div')
       el.classList.add('customEl')
       el.innerHTML = $('#customElTextarea').value
       appendToDisplay(el)
     } else {
+      performance.mark('custom:remove')
       removeFromDisplay('.customEl')
     }
   })
