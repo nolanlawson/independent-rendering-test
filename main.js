@@ -54,6 +54,7 @@
 
   $('#canvas').addEventListener('change', function (e) {
     if (e.target.checked) {
+      performance.mark('canvas:add')
       var canvasEl = document.createElement('canvas')
       canvasEl.width = 100
       canvasEl.height = 100
@@ -62,6 +63,7 @@
       ctx.fillRect(0, 0, 100, 100)
       appendToDisplay(canvasEl)
     } else {
+      performance.mark('canvas:remove')
       removeFromDisplay('canvas')
     }
   })
