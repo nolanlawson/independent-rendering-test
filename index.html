@@ -14,10 +14,10 @@
 <div id="display"></div>
 </div>
 <h1>Independent Rendering test</h1>
-<h3 id="confidentialWarning">Microsoft confidential <a id="whatIsThisToggle" href="#whatIsThis">What is this?</a></h3>
+<h3><a id="whatIsThisToggle" href="#whatIsThis">What is this?</a></div></h3>
 <div id="whatIsThis" style="display:none;">
   <p>
-    Edge and IE have a feature called <strong>Independent Rendering</strong>, which allows rendering work
+    Edge and IE have a feature called <a href="https://blogs.windows.com/msedgedev/2017/08/17/making-web-smoother-independent-rendering/">Independent Rendering</a>, which allows rendering work
     to be done off the main thread and instead on a background thread, where it doesn't block JavaScript,
     DOM events, or other main-thread-bound operations.
   </p>
@@ -35,8 +35,6 @@
   </p>
 </div>
 <div class="section">
-<input id="jank" name="jank" type="checkbox" autocomplete="off"/>
-<label for="jank">Periodic jank</label>
 <input id="canvas" name="canvas" type="checkbox" autocomplete="off"/>
 <label for="canvas">Add canvas</label>
 <input id="advancedSvg" name="advancedSvg" type="checkbox" autocomplete="off"/>
@@ -45,8 +43,8 @@
 <div class="section">
 <input id="autoplayVideo" name="autoplayVideo" type="checkbox" autocomplete="off"/>
 <label for="autoplayVideo">Add video</label>
- <input id="autoplayVideoWithControls" name="autoplayVideoWithControls" type="checkbox" autocomplete="off"/>
-<label for="autoplayVideoWithControls">Add video with controls</label>
+ <input id="selectControl" name="selectControl" type="checkbox" autocomplete="off"/>
+<label for="selectControl">Add select</label>
   <input id="addAudio" name="addAudio" type="checkbox" autocomplete="off"/>
   <label for="addAudio">Add audio</label>
 </div>
@@ -58,140 +56,140 @@
 <textarea id="customElTextarea">&lt;span&gt;Your custom HTML here!&lt;/span&gt;</textarea>
 </div>
 <ul>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
-<li>Scroll me! <img src="kirby_run.gif"/> <img src="kirby_cook.gif"/> <img src="kirby_hats.gif"/> <img src="kirby_tire.gif"/> <img src="kirby_paint.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
+<li>Scroll me! <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> <img src="ie.gif"/> Scroll me! </li>
 </ul>
 </div>
 <script src="fps-emitter.js"></script>

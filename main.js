@@ -35,22 +35,6 @@
     }
   }
 
-  var jankHandle
-
-  function jank(ms) {
-    var start = Date.now()
-    while (Date.now() - start <= ms) {}
-  }
-
-  $('#jank').addEventListener('change', function (e) {
-    if (e.target.checked) {
-      jankHandle = setInterval(function () {
-        jank(200)
-      }, 300)
-    } else {
-      clearInterval(jankHandle)
-    }
-  })
 
   $('#canvas').addEventListener('change', function (e) {
     if (e.target.checked) {
@@ -86,7 +70,7 @@
       performance.mark('autoplayVideo:add')
       var el = document.createElement('div')
       el.classList.add('autoplayVideoEl')
-      el.innerHTML = '<video autoplay loop muted src="kirby_paint.mp4" width="50" height="50"></video>'
+      el.innerHTML = '<video autoplay loop muted src="windows.mp4" width="300"></video>'
       appendToDisplay(el)
     } else {
       performance.mark('autoplayVideo:remove')
@@ -94,16 +78,21 @@
     }
   })
 
-  $('#autoplayVideoWithControls').addEventListener('change', function (e) {
+  $('#selectControl').addEventListener('change', function (e) {
     if (e.target.checked) {
-      performance.mark('autoplayVideoWithControls:add')
+      performance.mark('selectControl:add')
       var el = document.createElement('div')
-      el.classList.add('autoplayVideoElWithControls')
-      el.innerHTML = '<video autoplay loop muted controls src="kirby_paint.mp4" width="50" height="50"></video>'
+      el.classList.add('selectControl')
+      el.innerHTML = '<select>\n' +
+        '  <option value="alpha">Alpha</option>\n' +
+        '  <option value="bravo">Bravo</option>\n' +
+        '  <option value="charlie">Charlie</option>\n' +
+        '  <option value="delta">Delta</option>\n' +
+        '</select>'
       appendToDisplay(el)
     } else {
-      performance.mark('autoplayVideoWithControls:remove')
-      removeFromDisplay('.autoplayVideoElWithControls')
+      performance.mark('selectControl:remove')
+      removeFromDisplay('.selectControl')
     }
   })
 
@@ -113,7 +102,7 @@
       performance.mark('audio:add')
       var el = document.createElement('div')
       el.classList.add('addAudioEl')
-      el.innerHTML = '<audio controls src="win31.mp3"></audio>'
+      el.innerHTML = '<audio src="win31.mp3" autoplay loop></audio>'
       appendToDisplay(el)
     } else {
       performance.mark('audio:remove')
