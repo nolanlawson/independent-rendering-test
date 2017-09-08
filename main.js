@@ -83,7 +83,7 @@
       performance.mark('selectControl:add')
       var el = document.createElement('div')
       el.classList.add('selectControl')
-      el.innerHTML = '<select>\n' +
+      el.innerHTML = '<select size="3">\n' +
         '  <option value="alpha">Alpha</option>\n' +
         '  <option value="bravo">Bravo</option>\n' +
         '  <option value="charlie">Charlie</option>\n' +
